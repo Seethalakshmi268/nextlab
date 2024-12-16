@@ -1,0 +1,34 @@
+image: node:22  # Specify the Node.js version 22 Docker image
+
+# Cache node_modules to speed up builds
+cache:
+  paths:
+    - front/ui/node_modules/
+
+before_script:
+  - cd ./front/ui  # Navigate to the React app directory
+  - rm -rf build   # Clean the existing build
+  - CI=false npm install  # Install dependencies with CI=false to avoid warnings being treated as errors
+
+pages:
+  stage: deploy
+  environment: production  # Define environment name
+  script:
+    - CI=false npm run build  # Build the React app
+    - cp build/index.html build/404.html  # Reroute to index in case of 404
+    - ls  # List files for debugging
+    - cd ..  # Go back to project root directory
+    - mkdir public  # Create public directory for deployment
+    - mv ./front/ui/build/* public  # Move build content to public directory
+  artifacts:
+  paths:
+    - public
+
+  only:
+    refs:
+      - master  # Only deploy from the master branch
+
+  script:
+  - npm run build
+  - cp build/index.html build/404.html
+  - mv build/ public/

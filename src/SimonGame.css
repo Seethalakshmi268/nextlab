@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+.simon-button {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    /* transition: opacity 0.2s ease; */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .simon-button:active {
+    opacity: 0.7;
+  }
+  h1 {
+    font-family: 'Press Start 2P', cursive; /* Retro-style font */
+    font-size: 24px; /* Adjust size as needed */
+    color: #f8f8dc; /* Light beige */
+    text-shadow: 2px 2px 4px #000; /* Optional shadow for depth */
+    margin: 0;
+  }
+  /* Flash effect */
+  .simon-button.flash {
+    animation: flash 2s ease-in-out; /* Flash animation duration */
+    transform: scale(1.6); /* Make the button bigger during the flash */
+  }
+  
+  @keyframes flash {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .bg-success {
+    background-color: green;
+  }
+  
+  .bg-danger {
+    background-color: red;
+  }
+  
+  .bg-warning {
+    background-color: yellow;
+  }
+  
+  .bg-primary {
+    background-color: blue;
+  }
+  .retro-header {
+    font-family: 'Press Start 2P', cursive; /* Pixel retro font */
+    font-size: 2.5rem; /* Adjust font size as needed */
+    color: #FFEA98; /* Light yellowish color */
+    text-align: center;
+    text-shadow: 2px 2px 0px #000; /* Retro pixel-like shadow effect */
+    letter-spacing: 2px; /* Add some spacing between letters */
+    background-color: #001D3D; /* Dark blue background */
+    padding: 10px;
+    display: inline-block;
+    border-radius: 5px; /* Optional rounded corners */
+  }
