@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/nextlab/static/css/main.894f6274.css",
+    "main.js": "/nextlab/static/js/main.d3251127.js",
+    "static/js/488.d9923d4e.chunk.js": "/nextlab/static/js/488.d9923d4e.chunk.js",
+    "index.html": "/nextlab/index.html",
+    "main.894f6274.css.map": "/nextlab/static/css/main.894f6274.css.map",
+    "main.d3251127.js.map": "/nextlab/static/js/main.d3251127.js.map",
+    "488.d9923d4e.chunk.js.map": "/nextlab/static/js/488.d9923d4e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.894f6274.css",
+    "static/js/main.d3251127.js"
+  ]
+}
